@@ -373,79 +373,79 @@ function showService(service){
  let content = "";
 
  if(service === "pan"){
-  content = "<h3>पैन कार्ड</h3><p>DOCUMENTS: आधार कार्ड, फोटो</p><p>सेवा शुल्क:  ₹150</p><img src='https://www.drupal.org/files/project-images/How-to-apply-for-PAN-Card-PAN-APPLICATION.png' alt='पैन कार्ड' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+  content = "<h3>पैन कार्ड</h3><p>DOCUMENTS: आधार कार्ड, फोटो, हस्ताक्षर, 10TH MARKSHEET/BIRTH CERTIFICATE</p><p>सेवा शुल्क:  ₹200</p><p>तत्काल PAN CARD: ₹300</p><img src='https://www.drupal.org/files/project-images/How-to-apply-for-PAN-Card-PAN-APPLICATION.png' alt='पैन कार्ड' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "aadhar"){
   content = "<h3>आधार सेवाएं</h3><p>DOCUMENTS: काम के अनुसार</p><p>सेवा शुल्क:   काम के अनुसार</p><img src='https://upload.wikimedia.org/wikipedia/commons/1/15/Specimen_of_an_Aadhaar_Card_2024.png' alt='आधार कार्ड' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "voter"){
-  content = "<h3>वोटर कार्ड</h3><p>DOCUMENTS: आधार, फोटो, पता प्रमाण</p><p>सेवा शुल्क: काम के अनुसार</p><img src='https://upload.wikimedia.org/wikipedia/commons/9/9c/Sample_Voter_ID_Card.jpg' alt='वोटर कार्ड' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+  content = "<h3>वोटर कार्ड</h3><p>DOCUMENTS: आधार, फोटो, MO. NUMBER, 2003 KI MATA/PITA KI VOTER LIST</p><p>सेवा शुल्क: ₹100</p><img src='https://hdcardprint.com/wp-content/uploads/2025/03/VOTE-FRONT.jpg' alt='वोटर कार्ड' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "online_form"){
-  content = "<h3>ऑनलाइन फॉर्म</h3><p>DOCUMENTS: आवश्यक दस्तावेज</p><p>सेवा शुल्क: ₹20</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Sample_online_form.jpg/800px-Sample_online_form.jpg' alt='ऑनलाइन फॉर्म' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+  content = "<h3>ऑनलाइन फॉर्म</h3><p>DOCUMENTS: आवश्यक दस्तावेज फॉर्म के अनुसार </p><p>सेवा शुल्क: फॉर्म के अनुसार</p><img src='https://static.vecteezy.com/system/resources/thumbnails/028/149/116/small/3d-clipboard-icon-png.png' alt='ऑनलाइन फॉर्म' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "print_scan"){
-  content = "<h3>प्रिंट / स्कैन</h3><p>DOCUMENTS: कोई नहीं</p><p>सेवा शुल्क: ₹5 प्रति पेज</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Printer_scanner.jpg/800px-Printer_scanner.jpg' alt='प्रिंट / स्कैन' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+  content = "<h3>प्रिंट / स्कैन</h3><p>DOCUMENT: सभी प्रकार के</p><p>सेवा शुल्क: B&W - ₹5 प्रति पेज <p>CLR - ₹15 प्रति पेज</p></p><img src='https://static.vecteezy.com/system/resources/previews/028/027/809/non_2x/printer-3d-icon-free-png.png' alt='प्रिंट / स्कैन' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "electricity"){
-  content = "<h3>बिजली भुगतान</h3><p>DOCUMENTS: बिल नंबर</p><p>सेवा शुल्क: ₹10</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Electricity_bill_sample.jpg/800px-Electricity_bill_sample.jpg' alt='बिजली बिल' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+  content = "<h3>बिजली भुगतान</h3><p>DOCUMENTS: ACC नंबर</p><p>सेवा शुल्क: भुगतान शुल्क अनुसार</p><img src='https://www.kindpng.com/picc/m/61-618374_power-electrical-logo-png-transparent-png.png' alt='बिजली बिल' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "job_form"){
-  content = "<h3>जॉब फॉर्म</h3><p>DOCUMENTS: आधार, शैक्षिक प्रमाण</p><p>सेवा शुल्क: ₹50</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Job_application_form.jpg/800px-Job_application_form.jpg' alt='जॉब फॉर्म' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+  content = "<h3>जॉब फॉर्म</h3><p>DOCUMENTS: आवश्यक दस्तावेज फॉर्म के अनुसार</p><p>सेवा शुल्क: फॉर्म के अनुसार</p><img src='https://i.pinimg.com/474x/51/88/aa/5188aa08fea5404b1bdc3ee2423b3234.jpg' alt='जॉब फॉर्म' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "passport"){
-  content = "<h3>पासपोर्ट सेवा</h3><p>DOCUMENTS: आधार, फोटो, जन्म प्रमाण</p><p>सेवा शुल्क: ₹200</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sample_passport.jpg/800px-Sample_passport.jpg' alt='पासपोर्ट' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+  content = "<h3>पासपोर्ट सेवा</h3><p>DOCUMENTS: आधार, पैन कार्ड, 10TH MARKSHEET, MO. NUMBER, EMAIL I'D </p><p>सेवा शुल्क: ₹1700</p><img src='https://static.vecteezy.com/system/resources/thumbnails/070/917/688/small/3d-rendered-passport-isolated-on-transparent-background-png.png' alt='पासपोर्ट' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "driving_license"){
-  content = "<h3>ड्राइविंग लाइसेंस</h3><p>DOCUMENTS: आधार, फोटो, पता प्रमाण</p><p>सेवा शुल्क: ₹100</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Sample_driving_licence.jpg/800px-Sample_driving_licence.jpg' alt='ड्राइविंग लाइसेंस' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+  content = "<h3>ड्राइविंग लाइसेंस</h3><p>DOCUMENTS: आधार, फोटो, MO. NUMBER, EMAIL I'D, SIGNATURE</p><p>सेवा शुल्क: ₹7500</p><img src='https://cdn3d.iconscout.com/3d/premium/thumb/license-granted-3d-icon-png-download-8662350.png' alt='ड्राइविंग लाइसेंस' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
  }
  else if(service === "caste_certificate"){
-  content = "<h3>जाति प्रमाण पत्र</h3><p>DOCUMENTS: आधार, जाति प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+  content = "<h3>जाति प्रमाण पत्र</h3><p>DOCUMENTS: आधार, LINK MOBILE NO.</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "residence_certificate"){
-  content = "<h3>निवास प्रमाण पत्र</h3><p>DOCUMENTS: आधार, पता प्रमाण</p><p>सेवा शुल्क: ₹30</p>";
+  content = "<h3>निवास प्रमाण पत्र</h3><p>DOCUMENTS: आधार, LINK MOBILE NO.</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "income_certificate"){
-  content = "<h3>आय प्रमाण पत्र</h3><p>DOCUMENTS: आधार, आय प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+  content = "<h3>आय प्रमाण पत्र</h3><p>DOCUMENTS: आधार, LINK MOBILE NO.</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "ration_card"){
-  content = "<h3>राशन कार्ड</h3><p>DOCUMENTS: आधार, परिवार प्रमाण</p><p>सेवा शुल्क: ₹100</p>";
+  content = "<h3>राशन कार्ड</h3><p>DOCUMENTS: आधार, परिवार प्रमाण, फोटो, MO. NUMBER, BANK PASSBOOK</p><p>सेवा शुल्क: ₹150</p>";
  }
  else if(service === "farmer_registration"){
-  content = "<h3>किसान पंजीकरण</h3><p>DOCUMENTS: आधार, जमीन प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+  content = "<h3>किसान पंजीकरण</h3><p>DOCUMENTS: आधार, जमीन प्रमाण</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "ayushman_card"){
-  content = "<h3>आयुष्मान कार्ड</h3><p>DOCUMENTS: आधार, परिवार प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+  content = "<h3>आयुष्मान कार्ड</h3><p>DOCUMENTS: आधार, LINK MO. NUMBER, LIVE PHOTO</p><p>सेवा शुल्क: ₹300</p>";
  }
  else if(service === "khatauni"){
-  content = "<h3>खतौनी</h3><p>DOCUMENTS: जमीन प्रमाण</p><p>सेवा शुल्क: ₹100</p>";
+  content = "<h3>खतौनी</h3><p>DOCUMENTS: जमीन प्रमाण</p><p>सेवा शुल्क: ₹30</p>";
  }
  else if(service === "pf_withdrawal"){
-  content = "<h3>PF निकासी</h3><p>DOCUMENTS: PF नंबर, आधार</p><p>सेवा शुल्क: ₹50</p>";
+  content = "<h3>PF निकासी</h3><p>DOCUMENTS: PF नंबर, आधार, पैन कार्ड, बैंक पासबुक, MO. NUMBER</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "scholarship_form"){
-  content = "<h3>छात्रवृत्ति फॉर्म</h3><p>DOCUMENTS: आधार, शैक्षिक प्रमाण</p><p>सेवा शुल्क: ₹30</p>";
+  content = "<h3>छात्रवृत्ति फॉर्म</h3><p>DOCUMENTS: आधार, शैक्षिक प्रमाण, आय-जाति प्रमाण पत्र, MO. NUMBER, EMAIL I'D</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "e_challan"){
-  content = "<h3>ई-चालान</h3><p>DOCUMENTS: वाहन नंबर</p><p>सेवा शुल्क: ₹20</p>";
+  content = "<h3>ई-चालान</h3><p>DOCUMENTS: वाहन नंबर, REG. MO. NUMBER</p><p>सेवा शुल्क: चालान अनुसार</p>";
  }
  else if(service === "e_shram_card"){
-  content = "<h3>ई श्रम कार्ड</h3><p>DOCUMENTS: आधार, रोजगार प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+  content = "<h3>ई श्रम कार्ड</h3><p>DOCUMENTS: आधार, रोजगार प्रमाण, बैंक पासबुक, MO. NUMBER</p><p>सेवा शुल्क: ₹100/₹150</p>";
  }
  else if(service === "widow_pension"){
-  content = "<h3>विधवा पेंशन</h3><p>DOCUMENTS: आधार, मृत्यु प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+  content = "<h3>विधवा पेंशन</h3><p>DOCUMENTS: आधार, आय प्रमाण पत्र, मृत्यु प्रमाण, फोटो, MO. NUMBER</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "atm_withdrawal"){
-  content = "<h3>ATM निकासी</h3><p>DOCUMENTS: कार्ड, PIN</p><p>सेवा शुल्क: ₹10</p>";
+  content = "<h3>ATM निकासी</h3><p>DOCUMENTS: कार्ड, PIN</p><p>सेवा शुल्क: निकासी के अनुसार</p>";
  }
  else if(service === "old_age_pension"){
-  content = "<h3>वृद्धा पेंशन</h3><p>DOCUMENTS: आधार, आयु प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+  content = "<h3>वृद्धा पेंशन</h3><p>DOCUMENTS: आधार, आयु प्रमाण, आय प्रमाण पत्र, फोटो, MO. NUMBER</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "alive_certificate"){
-  content = "<h3>जिवित प्रमाण पत्र</h3><p>DOCUMENTS: आधार</p><p>सेवा शुल्क: ₹30</p>";
+  content = "<h3>जिवित प्रमाण पत्र</h3><p>DOCUMENTS: आधार,बैंक पासबुक, P.P.O. NUMBER, MO. NUMBER</p><p>सेवा शुल्क: ₹100</p>";
  }
  else if(service === "inheritance_online"){
-  content = "<h3>वरासत ऑनलाइन</h3><p>DOCUMENTS: मृत्यु प्रमाण, संबंध प्रमाण</p><p>सेवा शुल्क: ₹100</p>";
+  content = "<h3>वरासत ऑनलाइन</h3><p>DOCUMENTS: मृत्यु प्रमाण, संबंध प्रमाण पत्र, खतौनी, MO. NUMBER</p><p>सेवा शुल्क: ₹150/₹200</p>";
  }
 
  document.getElementById("modalContent").innerHTML = content;
