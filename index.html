@@ -58,7 +58,8 @@ nav a:hover{color:#fff}
 
 /* ================= CARD ================= */
 .card{
-  background:rgba(255,255,255,0.03);
+  background:rgba(168,85,247,0.1);
+  backdrop-filter: blur(10px);
   border:1px solid rgba(255,255,255,0.05);
   padding:25px;border-radius:18px;
   transition:.4s;
@@ -101,6 +102,53 @@ nav a:hover{color:#fff}
 
 /* ================= FOOTER ================= */
 footer{text-align:center;padding:25px;color:#777}
+
+/* ================= MODAL ================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: rgba(168,85,247,0.1);
+  backdrop-filter: blur(10px);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  width: 80%;
+  max-width: 500px;
+  color: #e5e5e5;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+  cursor: default;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 /* ================= WHATSAPP ================= */
 .whatsapp{
@@ -210,60 +258,66 @@ footer{text-align:center;padding:25px;color:#777}
 <section class="section reveal" id="services">
 <h2>हमारी सेवाएं</h2>
 <div class="grid">
-<div class="card"><i class="fa-solid fa-id-card"></i> आधार सेवाएं</div>
+<div class="card" onclick="showService('aadhar')"><i class="fa-solid fa-id-card"></i> आधार सेवाएं</div>
 
-<div class="card"><i class="fa-solid fa-file"></i> ऑनलाइन फॉर्म</div>
+<div class="card" onclick="showService('online_form')"><i class="fa-solid fa-file"></i> ऑनलाइन फॉर्म</div>
 
-<div class="card"><i class="fa-solid fa-print"></i> प्रिंट / स्कैन</div>
+<div class="card" onclick="showService('print_scan')"><i class="fa-solid fa-print"></i> प्रिंट / स्कैन</div>
 
-<div class="card"><i class="fa-solid fa-bolt"></i> बिजली भुगतान</div>
+<div class="card" onclick="showService('electricity')"><i class="fa-solid fa-bolt"></i> बिजली भुगतान</div>
 
-<div class="card"><i class="fa-solid fa-user"></i> जॉब फॉर्म</div>
+<div class="card" onclick="showService('job_form')"><i class="fa-solid fa-user"></i> जॉब फॉर्म</div>
 
-<div class="card"><i class="fa-solid fa-passport"></i> पासपोर्ट सेवा</div>
+<div class="card" onclick="showService('passport')"><i class="fa-solid fa-passport"></i> पासपोर्ट सेवा</div>
 
-<div class="card"><i class="fa-solid fa-car"></i> ड्राइविंग लाइसेंस</div>
+<div class="card" onclick="showService('driving_license')"><i class="fa-solid fa-car"></i> ड्राइविंग लाइसेंस</div>
 
-<div class="card"><i class="fa-solid fa-certificate"></i> जाति प्रमाण पत्र</div>
+<div class="card" onclick="showService('caste_certificate')"><i class="fa-solid fa-certificate"></i> जाति प्रमाण पत्र</div>
 
-<div class="card"><i class="fa-solid fa-home"></i> निवास प्रमाण पत्र</div>
+<div class="card" onclick="showService('residence_certificate')"><i class="fa-solid fa-home"></i> निवास प्रमाण पत्र</div>
 
-<div class="card"><i class="fa-solid fa-file-lines"></i> आय प्रमाण पत्र</div>
+<div class="card" onclick="showService('income_certificate')"><i class="fa-solid fa-file-lines"></i> आय प्रमाण पत्र</div>
 
-<div class="card"><i class="fa-solid fa-id-card"></i> राशन कार्ड</div>
+<div class="card" onclick="showService('ration_card')"><i class="fa-solid fa-id-card"></i> राशन कार्ड</div>
 
-<div class="card"><i class="fa-solid fa-credit-card"></i> पैन कार्ड</div>
+<div class="card" onclick="showService('pan')"><i class="fa-solid fa-credit-card"></i> पैन कार्ड</div>
 
-<div class="card"><i class="fa-solid fa-tractor"></i> किसान पंजीकरण</div>
+<div class="card" onclick="showService('farmer_registration')"><i class="fa-solid fa-tractor"></i> किसान पंजीकरण</div>
 
-<div class="card"><i class="fa-solid fa-hospital"></i> आयुष्मान कार्ड</div>
+<div class="card" onclick="showService('ayushman_card')"><i class="fa-solid fa-hospital"></i> आयुष्मान कार्ड</div>
 
-<div class="card"><i class="fa-solid fa-file-signature"></i> खतौनी</div>
+<div class="card" onclick="showService('khatauni')"><i class="fa-solid fa-file-signature"></i> खतौनी</div>
 
-<div class="card"><i class="fa-solid fa-money-check"></i> PF निकासी</div>
+<div class="card" onclick="showService('pf_withdrawal')"><i class="fa-solid fa-money-check"></i> PF निकासी</div>
 
-<div class="card"><i class="fa-solid fa-graduation-cap"></i> छात्रवृत्ति फॉर्म</div>
+<div class="card" onclick="showService('scholarship_form')"><i class="fa-solid fa-graduation-cap"></i> छात्रवृत्ति फॉर्म</div>
 
 
-<div class="card"><i class="fa-solid fa-vote-yea"></i> वोटर कार्ड</div>
+<div class="card" onclick="showService('voter')"><i class="fa-solid fa-vote-yea"></i> वोटर कार्ड</div>
 
-<div class="card"><i class="fa-solid fa-receipt"></i> ई-चालान</div>
+<div class="card" onclick="showService('e_challan')"><i class="fa-solid fa-receipt"></i> ई-चालान</div>
 
-<div class="card"><i class="fa-solid fa-briefcase"></i> ई श्रम कार्ड</div>
+<div class="card" onclick="showService('e_shram_card')"><i class="fa-solid fa-briefcase"></i> ई श्रम कार्ड</div>
 
-<div class="card"><i class="fa-solid fa-book"></i> विधवा पेंशन</div>
+<div class="card" onclick="showService('widow_pension')"><i class="fa-solid fa-book"></i> विधवा पेंशन</div>
 
-<div class="card"><i class="fa-solid fa-credit-card"></i> ATM निकासी</div>
+<div class="card" onclick="showService('atm_withdrawal')"><i class="fa-solid fa-credit-card"></i> ATM निकासी</div>
 
-<div class="card"><i class="fa-solid fa-user"></i> विधवा पेंशन</div>
+<div class="card" onclick="showService('widow_pension')"><i class="fa-solid fa-user"></i> विधवा पेंशन</div>
 
-<div class="card"><i class="fa-solid fa-person-cane"></i> वृद्धा पेंशन</div>
+<div class="card" onclick="showService('old_age_pension')"><i class="fa-solid fa-person-cane"></i> वृद्धा पेंशन</div>
 
-<div class="card"><i class="fa-solid fa-person"></i> जिवित प्रमाण पत्र </div>
+<div class="card" onclick="showService('alive_certificate')"><i class="fa-solid fa-person"></i> जिवित प्रमाण पत्र </div>
 
-<div class="card"><i class="fa-solid fa-receipt"></i> वरासत ऑनलाइन</div>
+<div class="card" onclick="showService('inheritance_online')"><i class="fa-solid fa-receipt"></i> वरासत ऑनलाइन</div>
 </div>
 </section>
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalContent"></div>
+  </div>
+</div>
 
 <section class="section reveal" id="features">
 <h2>हम क्यों</h2>
@@ -283,7 +337,6 @@ footer{text-align:center;padding:25px;color:#777}
 <div class="price-card">फोटो कॉपी - ₹3</div>
 <div class="price-card">आधार प्रिंट कार्ड - ₹50</div>
 <div class="price-card">पासपोर्ट साइज़ फोटो 6 pcs.- ₹30</div>
-<div class="price-card">PVC कार्ड प्रिंटिंग - ₹100</div>
 
 <div>
 <h2> अन्य सेवाओं की जानकारी के लिए नीचे दिए गए नंबर पर WHATSAPP पर MASSAGE करें.</h2>
@@ -316,6 +369,100 @@ footer{text-align:center;padding:25px;color:#777}
 <a class="whatsapp" href="https://wa.me/918090325118"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
+function showService(service){
+ let content = "";
+
+ if(service === "pan"){
+  content = "<h3>पैन कार्ड</h3><p>DOCUMENTS: आधार कार्ड, फोटो</p><p>सेवा शुल्क:  ₹150</p><img src='https://upload.wikimedia.org/wikipedia/commons/5/5a/Permanent_Account_Number_%28PAN%29_Card.jpg' alt='पैन कार्ड' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "aadhar"){
+  content = "<h3>आधार सेवाएं</h3><p>DOCUMENTS: काम के अनुसार</p><p>सेवा शुल्क:   काम के अनुसार</p><img src='https://upload.wikimedia.org/wikipedia/commons/1/15/Specimen_of_an_Aadhaar_Card_2024.png' alt='आधार कार्ड' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "voter"){
+  content = "<h3>वोटर कार्ड</h3><p>DOCUMENTS: आधार, फोटो, पता प्रमाण</p><p>सेवा शुल्क: काम के अनुसार</p><img src='https://upload.wikimedia.org/wikipedia/commons/9/9c/Sample_Voter_ID_Card.jpg' alt='वोटर कार्ड' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "online_form"){
+  content = "<h3>ऑनलाइन फॉर्म</h3><p>DOCUMENTS: आवश्यक दस्तावेज</p><p>सेवा शुल्क: ₹20</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Sample_online_form.jpg/800px-Sample_online_form.jpg' alt='ऑनलाइन फॉर्म' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "print_scan"){
+  content = "<h3>प्रिंट / स्कैन</h3><p>DOCUMENTS: कोई नहीं</p><p>सेवा शुल्क: ₹5 प्रति पेज</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Printer_scanner.jpg/800px-Printer_scanner.jpg' alt='प्रिंट / स्कैन' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "electricity"){
+  content = "<h3>बिजली भुगतान</h3><p>DOCUMENTS: बिल नंबर</p><p>सेवा शुल्क: ₹10</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Electricity_bill_sample.jpg/800px-Electricity_bill_sample.jpg' alt='बिजली बिल' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "job_form"){
+  content = "<h3>जॉब फॉर्म</h3><p>DOCUMENTS: आधार, शैक्षिक प्रमाण</p><p>सेवा शुल्क: ₹50</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Job_application_form.jpg/800px-Job_application_form.jpg' alt='जॉब फॉर्म' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "passport"){
+  content = "<h3>पासपोर्ट सेवा</h3><p>DOCUMENTS: आधार, फोटो, जन्म प्रमाण</p><p>सेवा शुल्क: ₹200</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sample_passport.jpg/800px-Sample_passport.jpg' alt='पासपोर्ट' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "driving_license"){
+  content = "<h3>ड्राइविंग लाइसेंस</h3><p>DOCUMENTS: आधार, फोटो, पता प्रमाण</p><p>सेवा शुल्क: ₹100</p><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Sample_driving_licence.jpg/800px-Sample_driving_licence.jpg' alt='ड्राइविंग लाइसेंस' style='width:100%; max-width:300px; margin-top:20px; border-radius:10px;'>";
+ }
+ else if(service === "caste_certificate"){
+  content = "<h3>जाति प्रमाण पत्र</h3><p>DOCUMENTS: आधार, जाति प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+ }
+ else if(service === "residence_certificate"){
+  content = "<h3>निवास प्रमाण पत्र</h3><p>DOCUMENTS: आधार, पता प्रमाण</p><p>सेवा शुल्क: ₹30</p>";
+ }
+ else if(service === "income_certificate"){
+  content = "<h3>आय प्रमाण पत्र</h3><p>DOCUMENTS: आधार, आय प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+ }
+ else if(service === "ration_card"){
+  content = "<h3>राशन कार्ड</h3><p>DOCUMENTS: आधार, परिवार प्रमाण</p><p>सेवा शुल्क: ₹100</p>";
+ }
+ else if(service === "farmer_registration"){
+  content = "<h3>किसान पंजीकरण</h3><p>DOCUMENTS: आधार, जमीन प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+ }
+ else if(service === "ayushman_card"){
+  content = "<h3>आयुष्मान कार्ड</h3><p>DOCUMENTS: आधार, परिवार प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+ }
+ else if(service === "khatauni"){
+  content = "<h3>खतौनी</h3><p>DOCUMENTS: जमीन प्रमाण</p><p>सेवा शुल्क: ₹100</p>";
+ }
+ else if(service === "pf_withdrawal"){
+  content = "<h3>PF निकासी</h3><p>DOCUMENTS: PF नंबर, आधार</p><p>सेवा शुल्क: ₹50</p>";
+ }
+ else if(service === "scholarship_form"){
+  content = "<h3>छात्रवृत्ति फॉर्म</h3><p>DOCUMENTS: आधार, शैक्षिक प्रमाण</p><p>सेवा शुल्क: ₹30</p>";
+ }
+ else if(service === "e_challan"){
+  content = "<h3>ई-चालान</h3><p>DOCUMENTS: वाहन नंबर</p><p>सेवा शुल्क: ₹20</p>";
+ }
+ else if(service === "e_shram_card"){
+  content = "<h3>ई श्रम कार्ड</h3><p>DOCUMENTS: आधार, रोजगार प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+ }
+ else if(service === "widow_pension"){
+  content = "<h3>विधवा पेंशन</h3><p>DOCUMENTS: आधार, मृत्यु प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+ }
+ else if(service === "atm_withdrawal"){
+  content = "<h3>ATM निकासी</h3><p>DOCUMENTS: कार्ड, PIN</p><p>सेवा शुल्क: ₹10</p>";
+ }
+ else if(service === "old_age_pension"){
+  content = "<h3>वृद्धा पेंशन</h3><p>DOCUMENTS: आधार, आयु प्रमाण</p><p>सेवा शुल्क: ₹50</p>";
+ }
+ else if(service === "alive_certificate"){
+  content = "<h3>जिवित प्रमाण पत्र</h3><p>DOCUMENTS: आधार</p><p>सेवा शुल्क: ₹30</p>";
+ }
+ else if(service === "inheritance_online"){
+  content = "<h3>वरासत ऑनलाइन</h3><p>DOCUMENTS: मृत्यु प्रमाण, संबंध प्रमाण</p><p>सेवा शुल्क: ₹100</p>";
+ }
+
+ document.getElementById("modalContent").innerHTML = content;
+ document.getElementById("serviceModal").style.display = "block";
+}
+
+function closeModal() {
+ document.getElementById("serviceModal").style.display = "none";
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById("serviceModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 function goTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
 
 window.addEventListener('scroll',()=>{
@@ -328,3 +475,4 @@ window.addEventListener('scroll',()=>{
 
 </body>
 </html>
+
